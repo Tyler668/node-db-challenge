@@ -5,7 +5,7 @@ exports.up = function (knex) {
             tbl.increments();
             tbl.text('project_name', 128).unique().notNullable(); //potentially switch to strings if it ends up mattering
             tbl.text('description', 256);
-            tbl.boolean('complete').defaultTo(false).notNullable;
+            tbl.boolean('complete').notNullable;
         })
 
         .createTable('resources', tbl => {  // Many to many, resources to projects
@@ -21,7 +21,7 @@ exports.up = function (knex) {
             tbl.text('task_name', 128);
             tbl.text('description', 256);
             tbl.text('notes', 256);
-            tbl.boolean('complete').defaultTo(false).notNullable;
+            tbl.boolean('complete').notNullable;
 
             tbl.integer('project_id')
                 .unsigned()

@@ -11,6 +11,7 @@ module.exports = {
 
 function getProjects() {
     return db('projects');
+    
 }
 
 function getResources() {
@@ -18,28 +19,28 @@ function getResources() {
 }
 
 function getTasks() {
+
+
     return db('tasks')
         .join('projects', 'projects.id', '=', 'tasks.project_id')
         .select('tasks.id', 'projects.project_name', 'tasks.task_name', 'tasks.description', 'tasks.complete');
-}
+
+    }
 
 function addProject(project) {
     return db('projects')
         .insert(project);
-
 }
 
 function addResource(resource) {
     return db('resources')
         .insert(resource);
-
 }
 
 
 function addTask(task) {
     return db('tasks')
         .insert(task);
-
 }
 
 // function findSteps(schemeID) {

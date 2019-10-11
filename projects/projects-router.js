@@ -34,7 +34,6 @@ router.get('/tasks', (req, res) => {
         });
 });
 
-
 router.post('/', (req, res) => {
     const project = req.body;
 
