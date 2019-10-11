@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+SQL or 'Structured Query Language' is the mean by which we interact with a relational database. It allows us to perform CRUD operations and things like joins on an RD
+
 - [ ] Why do tables need a `primary key`?
+
+Primary keys serialize data and provide a unique identifier for each new data point. Primary keys from one table can also be used to bridge / reference data in another table as a foreign key. 
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+This is called a foreign key.
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+A third, intermediary table is generally needed to link up foreign keys (representative of the primary keys) of the first two tables, so that a relationship between them can be made without interfering with the original sets of data.
 
 ## Minimum Viable Product
 
