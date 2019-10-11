@@ -5,13 +5,13 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('resources').insert([
-        {resource_name: 'Food'},
-        {resource_name: 'Time'},
-        {resource_name: 'Compassion'},
-        {resource_name: 'Propaganda'},
-        {resource_name: 'Arms'},
-        {resource_name: 'Militia'},
-        {resource_name: 'Books'},
+        {resource_name: 'Food'}, //1
+        {resource_name: 'Time'}, //2
+        {resource_name: 'Compassion'}, //3
+        {resource_name: 'Propaganda'}, //4
+        {resource_name: 'Arms'}, //5
+        {resource_name: 'Militia'}, //6
+        {resource_name: 'Books'}, //7
       ]);
     });
 };
